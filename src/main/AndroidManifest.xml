@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.FIME.ConoceUANL"
+    android:installLocation="preferExternal">
+  <uses-feature android:name="android.hardware.Camera" android:required="true" />
+
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+
+  <application
+      android:allowBackup="true"
+      android:hardwareAccelerated="false"
+      android:icon="@drawable/logo"
+      android:label="@string/app_name"
+      android:largeHeap="true"
+      android:supportsRtl="true"
+      android:theme="@style/Theme.AppCompat.NoActionBar">
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="@string/google_maps_key" />
+
+    <activity android:name=".Localizador">
+    </activity>
+
+    <activity android:name=".Facultades">
+    </activity>
+
+    <activity android:name=".Inicio" />
+
+    <activity android:name=".Entrar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+    <meta-data android:name="unity.build-id" android:value="acaeb9ba-e71b-495d-a3c6-d505fc17e46c" />
+    <meta-data android:name="unity.splash-mode" android:value="0" />
+    <meta-data android:name="unity.splash-enable" android:value="True" />
+
+    <activity android:label="@string/app_name" android:screenOrientation="fullSensor" android:launchMode="singleTask"
+        android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+        android:name="com.FIME.ConoceUANL.UnityPlayerActivity">
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+    </activity>
+
+  </application>
+
+  <uses-feature android:glEsVersion="0x00020000" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-feature android:name="android.hardware.camera" android:required="false" />
+  <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+  <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+</manifest>
